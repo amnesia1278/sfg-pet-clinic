@@ -1,5 +1,7 @@
 package com.example.services;
 
-public interface VetService<Vet, Long> {
+import com.example.model.Owner;
+import com.example.model.Vet;
 
+public interface VetService extends CrudService<Vet, Long> {
 }
