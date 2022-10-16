@@ -3,9 +3,10 @@ package com.example.services.map;
 import com.example.model.Owner;
 import com.example.services.CrudService;
 import com.example.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Owner findById(Long id) {
@@ -14,7 +15,7 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner save(Owner object) {
-        return super.save(object, object.getId());
+        return super.save(object);
     }
 
     @Override

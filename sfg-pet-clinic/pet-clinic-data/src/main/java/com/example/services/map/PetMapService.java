@@ -3,9 +3,10 @@ package com.example.services.map;
 import com.example.model.Pet;
 import com.example.services.CrudService;
 import com.example.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
@@ -19,7 +20,7 @@ public class PetMapService extends AbstractMapService<Pet, Long> implements PetS
 
     @Override
     public Pet save(Pet object) {
-        return super.save(object, object.getId());
+        return super.save(object);
     }
 
     @Override
